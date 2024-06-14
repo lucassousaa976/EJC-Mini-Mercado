@@ -1,80 +1,171 @@
-
 body {
-  font-family: sans-serif;
-  background-image: url('fundo.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 0; /* Remove body margin for better responsiveness */
+    font-family: sans-serif;
+    text-align: center;
+    background-image: url('assets/fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .container {
-  margin: 10px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+    max-width: 550px;
+    margin: 5px auto;
+    margin-top: 5%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .header {
-  background-color: #e93d9c;
-  border-radius: 10px;
-  color: #fff;
-  padding: 10px 5px;
-  text-align: center;
+    background-color: #e93d9c;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 5px 5px 5px;
+    text-align: center;
 }
 
 .header h1 {
-  margin: 0px;
-  margin-top: 2px;
+    margin: 0px;
+    margin-top: 2px;
 }
 
 .content {
-  display: flex;
-  flex-direction: column; /* Stack elements vertically on small screens */
-  margin-top: 10px;
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.consulta-cpf,
-.carteira-serasa {
-  width: 100%; /* Make sections full width on mobile */
-  margin: 5px 0; /* Adjust margin for vertical stacking */
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.consulta-cpf, .carteira-serasa {
+    width: 39%;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.consulta-cpf h2,
-.carteira-serasa h2 {
-  margin-top: 0;
+.consulta-cpf h2, .carteira-serasa h2 {
+    margin-top: 0;
+}
+
+.ver-mais {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.ver-mais:hover {
+    color: #23527c;
 }
 
 .carteira-serasa span {
-  font-weight: bold;
-  color: red;
+    font-weight: bold;
+    color: red;
 }
 
 .opcao {
-  max-width: 100%; /* Make section full width on mobile */
-  border-radius: 10px;
-  margin: 10px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 550px;
+    border-radius: 10px;
+    margin: 5px auto;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .botoes {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; /* Make buttons full width on mobile */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    margin: 1px auto;
 }
 
 .botoes h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#simButton, #naoButton {
+    width: 40%;
+    margin: 2px;
+    padding: 15px;
+    color: white;
+}
+
+#simButton {
+    background-color: #24b448;
+    margin-right: 2%;
+}
+
+#naoButton {
+    background-color: #b62c2c;
+    margin-left: 2%;
+}
+
+#imagem {
+    width: 200px;
+    height: 200px;
+}
+
+#imagemPop-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(14, 13, 13, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 100;
+}
+
+#imagemPop-up img {
+    width: 300px;
+    height: auto;
+}
+
+#fecharPop-up {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-top: 1px;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    .consulta-cpf, .carteira-serasa {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .botoes {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #simButton, #naoButton {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #imagem {
+        width: 100px;
+        height: 100px;
+    }
+
+    #imagemPop-up img {
+        width: 100%;
+    }
 }
