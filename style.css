@@ -1,0 +1,178 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-image: url('assets/fundo.png');
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+}
+
+.container {
+  max-width: 550px;
+  margin: 5px auto;
+  margin-top: 5%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.header {
+  background-color: #e93d9c;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 5px 5px 5px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0px;
+  margin-top: 2px;
+}
+
+.content {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.consulta-cpf {
+  width: 39%;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.consulta-cpf h2 {
+  margin-top: 0;
+}
+
+.ver-mais {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.ver-mais:hover {
+  color: #23527c;
+}
+
+.carteira-serasa {
+  width: 39%;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(224, 61, 115, 0.1);
+}
+
+.carteira-serasa h2 {
+  margin-top: 0;
+}
+
+.carteira-serasa span {
+  font-weight: bold;
+  color: red;
+}
+
+.opcao {
+  max-width: 550px;
+  border-radius: 10px;
+  margin: 5px auto;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content; /* Ajuste a largura como desejar */
+  margin: 1px auto; /* Centraliza o container na tela */
+}
+
+.botoes h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#simButton {
+  width: 40%;
+  margin: 2px;
+  padding: 15px;
+  margin-right: 2%;
+  background-color: #24b448;
+  color: white;
+}
+
+#naoButton {  
+  width: 40%;
+  margin: 2px;
+  padding: 15px;
+  margin-left: 2%;
+  background-color: #b62c2c;
+  color: white;
+}
+
+#imagem {
+  width: 200px;
+  height: 200px;
+}
+
+#imagemPop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(14, 13, 13, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 100; /* Posicione a imagem pop-up acima de outros elementos */
+}
+
+#imagemPop-up img {
+    width: 300px; /* Ajuste o tamanho da imagem */
+    height: auto;
+}
+
+#fecharPop-up {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin-top: 1px;
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+
+/* Adicione essas regras CSS para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+ .container {
+    padding: 10px;
+  }
+
+ .content {
+    flex-direction: column;
+  }
+
+ .consulta-cpf,.carteira-serasa {
+    width: 100%;
+    margin: 10px;
+  }
+}

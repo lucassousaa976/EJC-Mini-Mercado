@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quitar Dívida - Mini Mercado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+      <div class="header">
+        <h1>Olá Primo(a)</h1>
+      </div>
+      <div class="content">
+        <div class="consulta-cpf">
+          <h2>Consulta CPF</h2>
+          <p>Você tem 1 dívida no EJC Serasa</p>
+          <a href="#" class="ver-mais">
+            <i class="fas fa-arrow-right"></i> VER MAIS
+          </a>
+        </div>
+        <div class="carteira-serasa">
+          <h2>Carteira Serasa</h2>
+          <p>Saldo disponível: <span>R$ -117,83</span></p>
+          <p>Negocie sua Dívida </p>
+          <i class="fas fa-wallet"></i>
+        </div>
+      </div>
+    </div>
+    <div class="opcao">
+      <div class="botoes">
+        <h3>Deseja quitar sua dívida do Mini Mercado?</h3>
+        <button id="simButton">Sim</button>
+        <button id="naoButton">Não</button>
+        <div id="imagemPop-up" style="display: none;">
+            <img src="assets/Img.png" alt="Imagem Pop-up">
+            <button id="fecharPop-up">Fechar</button>
+        </div>
+        <img id="imagem" src="" alt="Imagem" style="display: none;">
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
