@@ -1,10 +1,12 @@
 body {
     font-family: sans-serif;
     text-align: center;
-    background-image: url('fundo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url('assets/fundo.png');
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    min-height: 100vh; /* Garante que a altura mínima do body seja 100% da altura da tela */
+    margin: 0; /* Remove margens padrão do body */
 }
 
 .container {
@@ -12,8 +14,8 @@ body {
     margin: 5px auto;
     margin-top: 5%;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
@@ -43,8 +45,8 @@ body {
     margin: 5px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.75);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -72,8 +74,8 @@ body {
     margin: 5px auto;
     margin-top: 15px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -81,8 +83,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: fit-content;
-    margin: 1px auto;
+    width: fit-content; /* Ajuste a largura como desejar */
+    margin: 1px auto; /* Centraliza o container na tela */
 }
 
 .botoes h3 {
@@ -127,11 +129,11 @@ button {
     background-color: rgba(14, 13, 13, 0.5);
     border-radius: 10px;
     padding: 10px;
-    z-index: 100;
+    z-index: 100; /* Posicione a imagem pop-up acima de outros elementos */
 }
 
 #imagemPop-up img {
-    width: 300px;
+    width: 300px; /* Ajuste o tamanho da imagem */
     height: auto;
 }
 
@@ -145,6 +147,16 @@ button {
 
 /* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
+    body {
+        background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
+    }
+
+    .container {
+        width: 90%; /* Ajuste a largura do container para telas menores */
+        margin: 5% auto; /* Centraliza e ajusta a margem superior */
+        padding: 10px; /* Reduz o padding em dispositivos móveis */
+    }
+
     .consulta-cpf, .carteira-serasa {
         width: 100%;
         margin: 5px 0;
