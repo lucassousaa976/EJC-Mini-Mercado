@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     text-align: center;
-    background-image: url('assets/fundo.png');
+    background-image: url('fundo.png');
     background-size: cover; /* Ajusta a imagem para cobrir toda a área */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     background-position: center; /* Centraliza a imagem */
