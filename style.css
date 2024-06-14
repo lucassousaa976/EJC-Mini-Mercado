@@ -1,41 +1,15 @@
+
 body {
   font-family: sans-serif;
-  text-align: center;
   background-image: url('fundo.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-
-  .container,
-  .opcao,
-  .botoes {
-    max-width: 100%; /* Set max-width to 100% for full width on mobile */
-    margin: 0 auto; /* Center elements horizontally */
-  }
-
-  .content {
-    flex-direction: column; /* Stack elements vertically on mobile */
-    align-items: center; /* Center elements horizontally within the row */
-  }
-
-  .consulta-cpf,
-  .carteira-serasa {
-    width: 100%; /* Set width to 100% for full width on mobile */
-    margin-bottom: 15px; /* Add space between elements */
-  }
-
-  #imagemPop-up img {
-    width: 100%; /* Set image width to 100% for responsive scaling */
-  }
+  margin: 0; /* Remove body margin for better responsiveness */
 }
 
 .container {
-  margin: 5px auto;
-  margin-top: 5%;
+  margin: 10px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -47,7 +21,7 @@ body {
   background-color: #e93d9c;
   border-radius: 10px;
   color: #fff;
-  padding: 10px 5px 5px 5px;
+  padding: 10px 5px;
   text-align: center;
 }
 
@@ -58,14 +32,14 @@ body {
 
 .content {
   display: flex;
+  flex-direction: column; /* Stack elements vertically on small screens */
   margin-top: 10px;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
-.consulta-cpf {
-  width: 39%;
-  margin: 5px;
+.consulta-cpf,
+.carteira-serasa {
+  width: 100%; /* Make sections full width on mobile */
+  margin: 5px 0; /* Adjust margin for vertical stacking */
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
@@ -73,29 +47,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.consulta-cpf h2 {
-  margin-top: 0;
-}
-
-.ver-mais {
-  color: #337ab7;
-  text-decoration: none;
-}
-
-.ver-mais:hover {
-  color: #23527c;
-}
-
-.carteira-serasa {
-  width: 39%;
-  margin: 5px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(224, 61, 115, 0.1);
-}
-
+.consulta-cpf h2,
 .carteira-serasa h2 {
   margin-top: 0;
 }
@@ -106,10 +58,9 @@ body {
 }
 
 .opcao {
-  max-width: 550px;
+  max-width: 100%; /* Make section full width on mobile */
   border-radius: 10px;
-  margin: 5px auto;
-  margin-top: 15px;
+  margin: 10px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -120,10 +71,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: fit-content;
-  margin: 1px auto;
+  width: 100%; /* Make buttons full width on mobile */
 }
 
 .botoes h3 {
   font-size: 22px;
   margin-bottom: 15px;
+}
