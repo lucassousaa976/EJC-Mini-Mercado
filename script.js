@@ -9,7 +9,7 @@ let posicaoNao = 0;
 naoButton.addEventListener('click', () => {
     posicaoNao++;
 
-    if (posicaoNao >= 5) {
+    if (posicaoNao >= 1) {
         imagemPopup.style.display = 'block';
         naoButton.disabled = true; // Desativa o botão "Não"
     } else {
