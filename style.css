@@ -1,14 +1,39 @@
 body {
-    font-family: sans-serif;
-    text-align: center;
-    background-image: url('fundo.png');
-    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    background-position: center; /* Centraliza a imagem */
+  font-family: sans-serif;
+  text-align: center;
+  background-image: url('fundo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+
+  .container,
+  .opcao,
+  .botoes {
+    max-width: 100%; /* Set max-width to 100% for full width on mobile */
+    margin: 0 auto; /* Center elements horizontally */
+  }
+
+  .content {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    align-items: center; /* Center elements horizontally within the row */
+  }
+
+  .consulta-cpf,
+  .carteira-serasa {
+    width: 100%; /* Set width to 100% for full width on mobile */
+    margin-bottom: 15px; /* Add space between elements */
+  }
+
+  #imagemPop-up img {
+    width: 100%; /* Set image width to 100% for responsive scaling */
+  }
 }
 
 .container {
-  max-width: 550px;
   margin: 5px auto;
   margin-top: 5%;
   padding: 20px;
@@ -91,88 +116,14 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .botoes {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: fit-content; /* Ajuste a largura como desejar */
-  margin: 1px auto; /* Centraliza o container na tela */
+  width: fit-content;
+  margin: 1px auto;
 }
 
 .botoes h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#simButton {
-  width: 40%;
-  margin: 2px;
-  padding: 15px;
-  margin-right: 2%;
-  background-color: #24b448;
-  color: white;
-}
-
-#naoButton {  
-  width: 40%;
-  margin: 2px;
-  padding: 15px;
-  margin-left: 2%;
-  background-color: #b62c2c;
-  color: white;
-}
-
-#imagem {
-  width: 200px;
-  height: 200px;
-}
-
-#imagemPop-up {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(14, 13, 13, 0.5);
-  border-radius: 10px;
-  padding: 10px;
-  z-index: 100; /* Posicione a imagem pop-up acima de outros elementos */
-}
-
-#imagemPop-up img {
-    width: 300px; /* Ajuste o tamanho da imagem */
-    height: auto;
-}
-
-#fecharPop-up {
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  margin-top: 1px;
-  margin-right: 2%;
-  cursor: pointer;
-}
-
-
-/* Adicione essas regras CSS para dispositivos móveis */
-@media only screen and (max-width: 768px) {
- .container {
-    padding: 10px;
-  }
-
- .content {
-    flex-direction: column;
-  }
-
- .consulta-cpf,.carteira-serasa {
-    width: 100%;
-    margin: 10px;
-  }
-}
+  font-size: 22px;
+  margin-bottom: 15px;
