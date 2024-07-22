@@ -25,5 +25,5 @@ fecharPopup.addEventListener('click', () => {
 
 simButton.addEventListener('click', () => {
     // Insira o código para abrir a conversa no WhatsApp
-    window.location.href = "https://api.whatsapp.com/send?phone=5561981689067";
+    window.location.href = "https://api.whatsapp.com/send?phone=5561991949057";
 });
